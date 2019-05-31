@@ -43,9 +43,10 @@ function createIssue() {
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
   //GET /repos/:owner/:repo/issues
-  const repo = 'lchan217/js-ajax-fetch-lab';
+  const repo = 'js-ajax-fetch-lab';
+  const user = 'lchan217'
   
-  fetch(`/api.github.com/repos/${repo}/issues`,{
+  fetch(`/api.github.com/repos/${user}/${repo}/issues`,{
   		headers: {
   			Authorization: `token ${getToken()}`
   		}
