@@ -26,10 +26,11 @@ function createIssue() {
  const title = document.getElementById('title').value
  const body = document.getElementById('body').value
  const postData = {title: title, body : body};
+ const user = 'lchan217'
  
- const repo = 'lchan217/js-ajax-fetch-lab';
+ const repo = 'js-ajax-fetch-lab';
 
- fetch(`/api.github.com/repos/${repo}/issues`,{
+ fetch(`/api.github.com/repos/${user}/${repo}/issues`,{
   	method: 'POST',
   	  body: JSON.stringify(postData),
   	  headers: {
